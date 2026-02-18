@@ -23,10 +23,6 @@ public class TreeSitterModel {
             return bashQuery
         case .c:
             return cQuery
-        case .go:
-            return goQuery
-        case .goMod:
-            return goModQuery
         case .json:
             return jsonQuery
         case .markdown:
@@ -35,20 +31,8 @@ public class TreeSitterModel {
             return markdownInlineQuery
         case .objc:
             return objcQuery
-        case .regex:
-            return regexQuery
-        case .ruby:
-            return rubyQuery
-        case .rust:
-            return rustQuery
-        case .sql:
-            return sqlQuery
         case .swift:
             return swiftQuery
-        case .toml:
-            return tomlQuery
-        case .yaml:
-            return yamlQuery
         case .plainText:
             return nil
         }
@@ -62,16 +46,6 @@ public class TreeSitterModel {
     /// Query for `C` files.
     public private(set) lazy var cQuery: Query? = {
         return queryFor(.c)
-    }()
-
-    /// Query for `Go` files.
-    public private(set) lazy var goQuery: Query? = {
-        return queryFor(.go)
-    }()
-
-    /// Query for `GoMod` files.
-    public private(set) lazy var goModQuery: Query? = {
-        return queryFor(.goMod)
     }()
 
     /// Query for `JSON` files.
@@ -94,39 +68,9 @@ public class TreeSitterModel {
         return queryFor(.objc)
     }()
 
-    /// Query for `Regex` files.
-    public private(set) lazy var regexQuery: Query? = {
-        return queryFor(.regex)
-    }()
-
-    /// Query for `Ruby` files.
-    public private(set) lazy var rubyQuery: Query? = {
-        return queryFor(.ruby)
-    }()
-
-    /// Query for `Rust` files.
-    public private(set) lazy var rustQuery: Query? = {
-        return queryFor(.rust)
-    }()
-
-    /// Query for `SQL` files.
-    public private(set) lazy var sqlQuery: Query? = {
-        return queryFor(.sql)
-    }()
-
     /// Query for `Swift` files.
     public private(set) lazy var swiftQuery: Query? = {
         return queryFor(.swift)
-    }()
-
-    /// Query for `TOML` files.
-    public private(set) lazy var tomlQuery: Query? = {
-        return queryFor(.toml)
-    }()
-
-    /// Query for `YAML` files.
-    public private(set) lazy var yamlQuery: Query? = {
-        return queryFor(.yaml)
     }()
 
     private func queryFor(_ codeLanguage: CodeLanguage) -> Query? {

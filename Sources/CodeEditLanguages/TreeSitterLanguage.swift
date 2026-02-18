@@ -11,18 +11,10 @@ import Foundation
 public enum TreeSitterLanguage: String {
     case bash
     case c
-    case go
-    case goMod
     case json
     case markdown
     case markdownInline
     case objc
-    case regex
-    case ruby
-    case rust
-    case sql
     case swift
-    case toml
-    case yaml
     case plainText
 }

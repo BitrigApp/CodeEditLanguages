@@ -23,19 +23,11 @@ extern "C" {
 
 extern TSLanguage *tree_sitter_bash();
 extern TSLanguage *tree_sitter_c();
-extern TSLanguage *tree_sitter_go();
-extern TSLanguage *tree_sitter_gomod();
 extern TSLanguage *tree_sitter_json();
 extern TSLanguage *tree_sitter_markdown();
 extern TSLanguage *tree_sitter_markdown_inline();
 extern TSLanguage *tree_sitter_objc();
-extern TSLanguage *tree_sitter_regex();
-extern TSLanguage *tree_sitter_ruby();
-extern TSLanguage *tree_sitter_rust();
-extern TSLanguage *tree_sitter_sql();
 extern TSLanguage *tree_sitter_swift();
-extern TSLanguage *tree_sitter_toml();
-extern TSLanguage *tree_sitter_yaml();
 
 #ifdef __cplusplus
 }

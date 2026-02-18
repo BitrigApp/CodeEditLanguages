@@ -91,10 +91,6 @@ public struct CodeLanguage {
             return tree_sitter_bash()
         case .c:
             return tree_sitter_c()
-        case .go:
-            return tree_sitter_go()
-        case .goMod:
-            return tree_sitter_gomod()
         case .json:
             return tree_sitter_json()
         case .markdown:
@@ -103,20 +99,8 @@ public struct CodeLanguage {
             return tree_sitter_markdown_inline()
         case .objc:
             return tree_sitter_objc()
-        case .regex:
-            return tree_sitter_regex()
-        case .ruby:
-            return tree_sitter_ruby()
-        case .rust:
-            return tree_sitter_rust()
-        case .sql:
-            return tree_sitter_sql()
         case .swift:
             return tree_sitter_swift()
-        case .toml:
-            return tree_sitter_toml()
-        case .yaml:
-            return tree_sitter_yaml()
         case .plainText:
             return nil
         }

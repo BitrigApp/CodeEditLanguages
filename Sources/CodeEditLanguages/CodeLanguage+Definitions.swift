@@ -13,19 +13,11 @@ public extension CodeLanguage {
     static let allLanguages: [CodeLanguage] = [
         .bash,
         .c,
-        .go,
-        .goMod,
         .json,
         .markdown,
         .markdownInline,
         .objc,
-        .regex,
-        .ruby,
-        .rust,
-        .sql,
-        .swift,
-        .toml,
-        .yaml
+        .swift
     ]
 
     /// A language structure for `Bash`
@@ -46,25 +38,6 @@ public extension CodeLanguage {
         lineCommentString: "//",
         rangeCommentStrings: ("/*", "*/"),
         highlights: ["folds", "indents", "injections", "locals", "tags"]
-    )
-
-    /// A language structure for `Go`
-    static let go: CodeLanguage = .init(
-        id: .go,
-        tsName: "go",
-        extensions: ["go"],
-        lineCommentString: "//",
-        rangeCommentStrings: ("/*", "*/"),
-        highlights: ["folds", "indents", "injections", "locals", "tags"]
-    )
-
-    /// A language structure for `GoMod`
-    static let goMod: CodeLanguage = .init(
-        id: .goMod,
-        tsName: "go-mod",
-        extensions: ["mod"],
-        lineCommentString: "//",
-        rangeCommentStrings: ("/*", "*/")
     )
 
     /// A language structure for `JSON`
@@ -108,51 +81,6 @@ public extension CodeLanguage {
         highlights: ["folds", "indents", "injections", "locals"]
     )
 
-    /// A language structure for `Regex`
-    static let regex: CodeLanguage = .init(
-        id: .regex,
-        tsName: "regex",
-        extensions: [],
-        lineCommentString: "",
-        rangeCommentStrings: ("", "")
-    )
-
-    /// A language structure for `Ruby`
-    static let ruby: CodeLanguage = .init(
-        id: .ruby,
-        tsName: "ruby",
-        extensions: ["rb"],
-        lineCommentString: "#",
-        rangeCommentStrings: ("=begin", "=end"),
-        highlights: ["folds", "indents", "injections", "locals", "tags"]
-    )
-
-    /// A language structure for `Rust`
-    static let rust: CodeLanguage = .init(
-        id: .rust,
-        tsName: "rust",
-        extensions: ["rs"],
-        lineCommentString: "//",
-        rangeCommentStrings: ("/*", "*/"),
-        documentationCommentStrings: [
-            .single("///"),
-            .single("//!"),
-            .pair(("/**", "*/")),
-            .pair(("/*!", "*/"))
-        ],
-        highlights: ["folds", "indents", "injections", "locals", "tags"]
-    )
-
-    /// A language structure for `SQL`
-    static let sql: CodeLanguage = .init(
-        id: .sql,
-        tsName: "sql",
-        extensions: ["sql"],
-        lineCommentString: "--",
-        rangeCommentStrings: ("/*", "*/"),
-        highlights: ["folds", "indents", "injections"]
-    )
-
     /// A language structure for `Swift`
     static let swift: CodeLanguage = .init(
         id: .swift,
@@ -162,26 +90,6 @@ public extension CodeLanguage {
         rangeCommentStrings: ("/*", "*/"),
         documentationCommentStrings: [.single("///"), .pair(("/**", "*/"))],
         highlights: ["folds", "indents", "injections", "locals", "tags"]
-    )
-
-    /// A language structure for `TOML`
-    static let toml: CodeLanguage = .init(
-        id: .toml,
-        tsName: "toml",
-        extensions: ["toml"],
-        lineCommentString: "#",
-        rangeCommentStrings: ("", ""),
-        highlights: ["folds", "indents", "injections", "locals"]
-    )
-
-    /// A language structure for `YAML`
-    static let yaml: CodeLanguage = .init(
-        id: .yaml,
-        tsName: "yaml",
-        extensions: ["yml", "yaml"],
-        lineCommentString: "#",
-        rangeCommentStrings: ("", ""),
-        highlights: ["folds", "indents", "injections", "locals"]
     )
 
     /// The default language (plain text)
